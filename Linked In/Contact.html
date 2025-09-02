@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact - Neemuch Tourism</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    :root{
+      --green:#2e7d32;
+      --green-light:#a5d6a7;
+      --muted:#6b6b6b;
+    }
+    body{
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #ffffff;
+      color: var(--green);
+      margin:0;
+      padding:0;
+    }
+
+    /* Navbar - consistent with site */
+    .navbar{
+      background-color: var(--green);
+    }
+    .navbar .navbar-brand, .navbar .nav-link{
+      color: #fff !important;
+    }
+    .navbar .nav-link:hover{
+      color: #c8e6c9 !important;
+    }
+
+    /* Page header */
+    .page-header{
+      background: linear-gradient(90deg, rgba(46,125,50,0.08), rgba(165,214,167,0.06));
+      padding: 48px 0;
+      text-align: center;
+    }
+    .page-header h1{
+      margin:0;
+      color: var(--green);
+      font-size: 2.2rem;
+      font-weight:700;
+    }
+    .page-header p{ color: var(--muted); margin-top:8px; }
+
+    /* Contact layout */
+    .contact-card{
+      border-radius:12px;
+      border:1px solid rgba(46,125,50,0.12);
+      box-shadow: 0 6px 18px rgba(46,125,50,0.06);
+      overflow: hidden;
+    }
+    .contact-info{
+      padding:28px;
+      background: linear-gradient(180deg, #f6fbf6, #ffffff);
+    }
+    .contact-info h5{ color: var(--green); }
+    .info-item{ display:flex; gap:12px; align-items:flex-start; margin-bottom:14px; color:#333; }
+    .info-item .icon{ font-size:1.3rem; color:var(--green); }
+
+    /* Form */
+    .form-section{ padding:28px; }
+    .form-floating .form-control:focus{
+      border-color: var(--green);
+      box-shadow: 0 0 0 0.15rem rgba(46,125,50,0.12);
+    }
+    .btn-send{
+      background: linear-gradient(45deg,var(--green),#1b5e20);
+      color:#fff;
+      border-radius:28px;
+      padding:10px 20px;
+      border:0;
+    }
+    .btn-send:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(46,125,50,0.18);
+    }
+
+    /* Map styling */
+    .map-responsive{
+      border-radius:12px;
+      overflow:hidden;
+      border:1px solid rgba(0,0,0,0.08);
+    }
+
+    footer{
+      background: var(--green);
+      color:#fff;
+      padding:18px 0;
+      text-align:center;
+      margin-top:32px;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width:767px){
+      .page-header h1{ font-size:1.6rem; }
+      .info-item{ align-items:center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-white" href="index.html">Neemuch Tourism</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMain">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="About.html">About</a></li>          
+          <li class="nav-item"><a class="nav-link" href="Services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="Gallary.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="page-header">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>Questions, suggestions or partnership — reach out to the Neemuch Tourism team.</p>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main class="container my-5">
+    <div class="contact-card row g-0">
+      <!-- Left: Contact info + map -->
+      <div class="col-lg-5 contact-info">
+        <h5>Get in touch</h5>
+        <p class="text-muted">Office hours: Mon - Sat (9:30 AM - 6:30 PM)</p>
+
+        <div class="info-item">
+          <div class="icon">📍</div>
+          <div>
+            <strong>Address</strong>
+            <div class="small text-muted">Gyanoday Road, Neemuch, Madhya Pradesh, India</div>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="icon">📞</div>
+          <div>
+            <strong>Phone</strong>
+            <div class="small text-muted">+91 72250 20251</div>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="icon">✉️</div>
+          <div>
+            <strong>Email</strong>
+            <div class="small text-muted">khushboo@gmail.com</div>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="icon">⏰</div>
+          <div>
+            <strong>Visiting Hours</strong>
+            <div class="small text-muted">Best time: Oct - Mar</div>
+          </div>
+        </div>
+
+        <hr>
+
+        <h6 class="mb-3">Location Map</h6>
+        <div class="map-responsive">
+          <!-- Google Maps embed for Neemuch (opens within site). Replace query param if needed -->
+          <iframe
+            src="https://www.google.com/maps?q=Neemuch%2C%20Madhya%20Pradesh&output=embed"
+            width="100%" height="260" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <p class="small text-muted mt-3">Map opens in this page. Click map controls for directions.</p>
+      </div>
+
+      <!-- Right: Contact form -->
+      <div class="col-lg-7 form-section">
+        <form id="contactForm" novalidate>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <div class="form-floating">
+                <input type="text" class="form-control" id="name" placeholder="Your name" required>
+                <label for="name">Your name</label>
+                <div class="invalid-feedback">Please enter your name.</div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-floating">
+                <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                <label for="email">Email address</label>
+                <div class="invalid-feedback">Please enter a valid email.</div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-floating">
+                <input type="tel" class="form-control" id="phone" placeholder="+91 9xx xxxx xxx" pattern="[0-9+\-\s]{7,20}">
+                <label for="phone">Phone (optional)</label>
+                <div class="invalid-feedback">Enter a valid phone number.</div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-floating">
+                <select id="subject" class="form-select" aria-label="Subject select">
+                  <option value="General">General enquiry</option>
+                  <option value="Tour">Tour guides</option>
+                  <option value="Partnership">Partnership</option>
+                  <option value="Media">Media request</option>
+                </select>
+                <label for="subject">Subject</label>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="form-floating">
+                <textarea class="form-control" placeholder="Write your message here..." id="message" style="height:120px" required></textarea>
+                <label for="message">Message</label>
+                <div class="invalid-feedback">Please enter a message.</div>
+              </div>
+            </div>
+
+            <div class="col-12 d-flex align-items-center justify-content-between">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="consent" required>
+                <label class="form-check-label small" for="consent">I agree to be contacted regarding my enquiry.</label>
+                <div class="invalid-feedback">You must agree before submitting.</div>
+              </div>
+
+              <button type="submit" class="btn btn-send">Send Message</button>
+            </div>
+
+            <div class="col-12">
+              <div id="formAlert" class="alert alert-success d-none" role="alert">
+                Thank you! Your message has been received. We'll respond within 2 business days.
+              </div>
+            </div>
+          </div>
+        </form>
+
+        <!-- Small accessibility / contact tips -->
+        <div class="mt-4 small text-muted">
+          For urgent assistance call the phone number above. For detailed directions use the map on the left.
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <small>© 2025 Neemuch Tourism | All Rights Reserved</small>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Client-side validation + demo submit
+    (function() {
+      'use strict';
+      const form = document.getElementById('contactForm');
+      const alertBox = document.getElementById('formAlert');
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        if (!form.checkValidity()) {
+          form.classList.add('was-validated');
+          return;
+        }
+
+        // Simulate successful submit (no backend). Show success alert and reset form.
+        alertBox.classList.remove('d-none');
+        form.reset();
+        form.classList.remove('was-validated');
+
+        // Hide alert after 5s
+        setTimeout(() => alertBox.classList.add('d-none'), 5000);
+      }, false);
+    })();
+  </script>
+
+</body>
+</html>

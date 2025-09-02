@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neemuch Portal</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* Global Theme */
+    body {
+      font-family: Arial, sans-serif;
+      scroll-behavior: smooth;
+      background: #f7fff9;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: #0b9444 !important;
+    }
+    .navbar .nav-link {
+      color: white !important;
+      transition: 0.3s;
+    }
+    .navbar .nav-link:hover {
+      color: #ffd700 !important;
+      transform: scale(1.1);
+    }
+
+    /* Slider */
+    .carousel-inner img {
+      height: 450px;
+      object-fit: cover;
+      filter: brightness(0.9);
+    }
+    .carousel-inner img:hover {
+      filter: brightness(1);
+      transform: scale(1.02);
+      transition: 0.6s ease-in-out;
+    }
+
+    /* Welcome */
+    .welcome h1 {
+      color: #0b9444;
+      font-weight: bold;
+    }
+
+    /* Table */
+    table {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    table thead {
+      background: #0b9444;
+      color: white;
+    }
+    table tbody tr:nth-child(even) {
+      background: #f2fdf7;
+    }
+    table tbody tr:hover {
+      background: #d8f9e4;
+      cursor: pointer;
+    }
+
+    /* Dropdown */
+    .dropdown-menu {
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      border-radius: 10px;
+    }
+    .dropdown-item:hover {
+      background: #0b9444;
+      color: white;
+      transform: translateX(5px);
+      transition: 0.3s;
+    }
+
+    /* Cards */
+    .card {
+      transition: 0.4s;
+      height: 100%;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+    .card img {
+      height: 200px;
+      object-fit: cover;
+    }
+
+    /* Footer */
+    footer {
+      background: #0b9444;
+      color: white;
+    }
+    footer a {
+      color: #ffd700;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Neemuch </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="Gallary.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">More</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="Jobs.html">Jobs</a></li>
+              <li><a class="dropdown-item" href="Businesses.html">Businesses</a></li>
+              <li><a class="dropdown-item" href="Education.html">Education</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  
+  <!-- Slider -->
+  <div id="mainCarousel" class="carousel slide mt-5" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://www.noblehousetours.com/wp-content/uploads/2017/11/waterfall-near-neemuch.jpg" class="d-block w-100">
+      </div>
+
+      <div class="carousel-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKwNMnmBA47JRjhuZYGsby85iv2nIbUqu0Aw&s" class="d-block w-100">
+      </div>
+      
+    </div>
+  </div>
+
+
+  <!-- Welcome -->
+  <section class="welcome text-center py-5">
+    <div class="container">
+      <h1>Welcome to Neemuch</h1>
+      <p class="lead">A city of agriculture, opium works, and rich history.</p>
+    </div>
+  </section>
+
+
+  <!-- Info Table -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="mb-4 text-center text-success">Quick Facts</h2>
+      <table class="table table-bordered text-center">
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Location</td>
+            <td>Madhya Pradesh, India</td>
+          </tr>
+          <tr>
+            <td>Known For</td>
+            <td>Agriculture, Opium Factory, Military Cantonment</td>
+          </tr>
+          <tr>
+            <td>Population</td>
+            <td>Approx 3.5 Lakh</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+
+  <!-- Cards -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="text-center text-success mb-4">Highlights</h2>
+      <div class="row g-4">
+        <div class="col-md-4 d-flex">
+          <div class="card w-100">
+            <img src="https://media.omya.com/is/image/omyaschweizag/Agriculture_Soil%20Conditioning_HeroPic_Main%20Pg:Small-Landscape?ts=1746608465858&dpr=on,1" class="card-img-top">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Agriculture</h5>
+              <p class="card-text">Neemuch is a major hub for grains, oilseeds, and pulses.</p>
+              <a href="#" class="btn btn-success mt-auto">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex">
+          <div class="card w-100">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/23/4c/5e/ba/lord-shiva-temple-sukhanand.jpg?w=700&h=400&s=1" class="card-img-top">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Tourism</h5>
+              <p class="card-text">Explore temples, cantonment, and scenic spots.</p>
+              <a href="#" class="btn btn-success mt-auto">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex">
+          <div class="card w-100">
+            <img src="https://indiawalkthrough.com/wp-content/uploads/2023/11/image-138-1536x1021.jpeg" class="card-img-top">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Culture</h5>
+              <p class="card-text">Rich festivals, markets, and a blend of traditions.</p>
+              <a href="#" class="btn btn-success mt-auto">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-4 text-center">
+    <p>&copy; 2025 Neemuch Portal | <a href="#">Back to top</a></p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
